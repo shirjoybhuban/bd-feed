@@ -1,5 +1,5 @@
 import { dm_sans, montserrat } from "@/lib/fonts";
-import { store } from "@/redux-toolkit/store";
+import { store } from "@/store";
 import "@/styles/globals.css";
 import Head from "next/head";
 import { Provider } from "react-redux";

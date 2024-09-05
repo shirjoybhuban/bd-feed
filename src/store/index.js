@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import orderSlice from "./order/orderSlice";
+import postSlice from "./post/postSlice";
 
 export const store = configureStore({
   reducer: {
-    orderSlice,
+    postSlice,
   },
   devTools: process.env.NEXT_PUBLIC_ENVIRONMENT !== "production",
   // middleware: (getDefaultMiddleware) =>
@@ -14,4 +14,4 @@ export const store = configureStore({
   //   }),
 });
 
-export const persistor = store;
+export const returnedStore = store;
