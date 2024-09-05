@@ -10,8 +10,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`Tailwind-Sh
 
 ## Getting Started
 
-Run the development server:
-
 ## Installation
 1. Clone the repository:
 ```bash
