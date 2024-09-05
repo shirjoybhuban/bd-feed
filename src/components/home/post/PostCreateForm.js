@@ -50,7 +50,10 @@ const PostCreateForm = () => {
               },
             })}
           />
-          <ErrorMessage errors={errors} name="name" />
+          <div className="text-red-500">
+            <ErrorMessage errors={errors} name="name" />
+          </div>
+
           <input
             type="text"
             className="bg-primary-100 m-1 p-3"
@@ -63,7 +66,9 @@ const PostCreateForm = () => {
               },
             })}
           />
-          <ErrorMessage errors={errors} name="title" />
+          <div className="text-red-500">
+            <ErrorMessage errors={errors} name="title" />
+          </div>
           <textarea
             rows={4}
             placeholder="Post content"
@@ -76,7 +81,10 @@ const PostCreateForm = () => {
               },
             })}
           />
-          <ErrorMessage errors={errors} name="content" />
+          <div className="text-red-500">
+            <ErrorMessage errors={errors} name="content" />
+          </div>
+
           <Button variant="outline" type="submit">
             Add your post
           </Button>

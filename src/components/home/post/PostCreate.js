@@ -1,7 +1,7 @@
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import dynamic from "next/dynamic";
 const PostCreateForm = dynamic(() => import("./PostCreateForm"), {
-  loading: () => <p>Getting Form...</p>,
+  loading: () => <p className="mt-2">Getting Form...</p>,
 });
 
 // This  component responsible for Adding post. I have made a collapsble design so that we don't load form in fat render. We split the form from intial bundle load.
