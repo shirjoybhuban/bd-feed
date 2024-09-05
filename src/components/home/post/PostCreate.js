@@ -9,7 +9,7 @@ const PostCreate = () => {
   return (
     <div>
       <Collapsible>
-        <CollapsibleTrigger className="text-primary-600 font-bold bg-white p-5 w-full mb-5">Whats going on your mind ?</CollapsibleTrigger>
+        <CollapsibleTrigger className="text-primary-600 font-bold bg-white p-5 w-full">Whats going on your mind ?</CollapsibleTrigger>
         <CollapsibleContent>
           <PostCreateForm />
         </CollapsibleContent>

@@ -31,9 +31,9 @@ const PostCreateForm = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white rounded-lg">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex flex-col gap-3 bg-slate-50">
+        <div className="flex flex-col gap-3 bg-slate-50 mt-5">
           <input
             type="text"
             className="bg-primary-100 m-1 p-3"
