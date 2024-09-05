@@ -20,12 +20,33 @@ export const postSlice = createSlice({
     },
     getPaginatedPostsSuccess: (state, action) => {
       state.getPaginatedPosts.loading = XHR_STATE.COMPLETE;
-      state.getPaginatedPosts.response = action.payload;
+      console.log("action.payload", action.payload);
+
+      state.getPaginatedPosts.response = {
+        ...state.getPaginatedPosts.response,
+        skip: action.payload.skip,
+        limit: action.payload.limit,
+        total: action.payload.total,
+        posts:
+          state.getPaginatedPosts.response == null
+            ? action.payload.posts
+            : [...state.getPaginatedPosts.response.posts, ...action.payload.posts],
+      };
     },
     getPaginatedPostsError: (state, action) => {
       state.getPaginatedPosts.loading = XHR_STATE.ASLEEP;
       state.getPaginatedPosts.error =
-        action.payload && action.payload.message ? `${action.payload.message}` : Constants.DEFAULT_ERROR_TEXT;
+        action.payload && action.payload.message ? `${action.payload.message}` : "Default Error Text From Const";
+    },
+
+    addPostToFront: (state, action) => {
+      state.getPaginatedPosts.response = {
+        ...state.getPaginatedPosts.response,
+        posts:
+          state.getPaginatedPosts.response == null
+            ? [action.payload]
+            : [action.payload, ...state.getPaginatedPosts.response.posts],
+      };
     },
   },
 });
@@ -45,6 +66,7 @@ export const postDispatcher = {
   },
 };
 
-export const { getPaginatedPostsStarts, getPaginatedPostsSuccess, getPaginatedPostsError } = postSlice.actions;
+export const { getPaginatedPostsStarts, getPaginatedPostsSuccess, getPaginatedPostsError, addPostToFront } =
+  postSlice.actions;
 
 export default postSlice.reducer;

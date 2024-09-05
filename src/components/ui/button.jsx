@@ -10,7 +10,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary-900 text-white hover:bg-primary-800 rounded-full active:scale-100 active:bg-primary-950",
         outline:
-          "border border-2 border-primary-900 text-primary-900 hover:bg-primary-800 hover:text-white rounded-full active:scale-100 active:bg-primary-950",
+          "border border-2 border-primary-900 text-primary-900 hover:bg-primary-800 hover:text-white active:scale-100 active:bg-primary-950",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },
