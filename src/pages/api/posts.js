@@ -11,8 +11,7 @@ export default function handler(req, res) {
 
 const getPosts = async (page) => {
   let response = await fetch("https://dummyjson.com/posts?limit=10&skip=10");
-  console.log("response", response);
-  //return response;
+  return response;
 };
 
 

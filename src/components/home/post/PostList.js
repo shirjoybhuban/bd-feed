@@ -14,15 +14,17 @@ const PostList = () => {
   const fetchPosts = () => {
     setIsLoading(true);
     dispatch(
-      postDispatcher.getPaginatedPosts(1, {
+      postDispatcher.getPaginatedPosts(10, {
         success: (response) => {
           setIsLoading(false);
         },
         error: (err) => {
           setIsLoading(false);
           if (error.status == 500) {
+            console.log("Something went wrong. please try again later", err);
+          } else {
+            console.log("Error in fetching post", err);
           }
-          console.log("Error in fetching orders", err);
         },
       })
     );

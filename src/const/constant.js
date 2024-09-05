@@ -2,7 +2,7 @@
 export const BASE_URL = "https://dummyjson.com";
 export const ORDER_GET = `${BASE_URL}/orders`;
 //export const POST_GET = `${BASE_URL}/posts`;
-export const POST_GET = `${BASE_URL}/posts?limit=10&skip=10`;
+export const POST_GET = `${BASE_URL}/posts`;
 
 export const XHR_STATE = Object.freeze({
   ASLEEP: "ASLEEP",

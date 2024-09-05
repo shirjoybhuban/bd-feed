@@ -20,8 +20,6 @@ export const postSlice = createSlice({
     },
     getPaginatedPostsSuccess: (state, action) => {
       state.getPaginatedPosts.loading = XHR_STATE.COMPLETE;
-      console.log("action.payload", action.payload);
-
       state.getPaginatedPosts.response = {
         ...state.getPaginatedPosts.response,
         skip: action.payload.skip,
