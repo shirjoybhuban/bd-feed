@@ -20,6 +20,8 @@ const PostList = () => {
         },
         error: (err) => {
           setIsLoading(false);
+
+          //We cann create error set which can be called in catch to handle all kind of error
           if (error.status == 500) {
             console.log("Something went wrong. please try again later", err);
           } else {

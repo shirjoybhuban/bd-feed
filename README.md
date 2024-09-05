@@ -8,8 +8,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`Tailwind-Sh
 * View Feed with virtualization
 * Add post with form validation
 
-## Getting Started
-
 ## Installation
 1. Clone the repository:
 ```bash
